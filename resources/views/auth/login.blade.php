@@ -41,9 +41,6 @@
                     <!--begin::Label-->
                     <label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
                     <!--end::Label-->
-                    <!--begin::Link-->
-                    <a href="{{ route('password.request') }}" class="link-primary fs-6 fw-bolder">Lupa Password ?</a>
-                    <!--end::Link-->
                 </div>
                 <!--end::Wrapper-->
                 <!--begin::Input-->

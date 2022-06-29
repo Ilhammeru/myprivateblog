@@ -131,7 +131,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Pengguna</span>
+                        <span class="menu-title">Master</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -140,7 +140,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">User</span>
+                                <span class="menu-title">Blog Category</span>
                             </a>
                         </div>
                     </div>

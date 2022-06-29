@@ -28,9 +28,8 @@
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="page d-flex flex-row flex-column-fluid">
-				@include('partials.sidebar')
 				<!--begin::Wrapper-->
-				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+				<div class="wrapper wrapper-blog d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					@include('partials.header')
 
 					<!--begin::Content-->
@@ -105,33 +104,6 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-
-		function handleError(err, button = "") {
-            if (button != "") {
-                button.attr('disabled', false);
-                button.text('Simpan');
-            }
-            let message = err.responseJSON.message;
-            if (message == 'FAILED') {
-                iziToast['error']({
-                    message: err.responseJSON.data.error,
-                    position: "topRight"
-                });
-            } else if (message == 'VALIDATION_FAILED') {
-                let error = err.responseJSON.data.error;
-                for (let a = 0; a < error.length; a++) {
-                    iziToast['error']({
-                        message: error[a],
-                        position: "topRight"
-                    });
-                }
-            } else {
-                iziToast['error']({
-                    message: message,
-                    position: "topRight"
-                });
-            }
-        }
 	</script>
 	@stack('scripts')
 

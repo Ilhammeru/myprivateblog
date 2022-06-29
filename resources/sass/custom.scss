@@ -1,0 +1,27 @@
+.wrapper {
+    
+    &-blog {
+        padding-left: 0 !important;
+    }
+}
+
+body {
+    background-color: #fff;;
+}
+
+.blog {
+    cursor: pointer;
+    &-title {
+    
+        &_main {
+            color: #222f3a !important;
+            line-height: 1.3875 !important;
+            padding-bottom: 12px !important;
+            vertical-align: baseline !important;
+        }
+    
+        &--text-1 {
+            font-size: 24px;
+        }
+    }
+}

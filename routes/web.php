@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\ShowBlogController;
+use App\Models\BlogCategory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('auth.login');
 });
 
@@ -46,3 +49,18 @@ Route::get('/register', function() {
 // Route::get('/password-request', function() {
 //     return 'password request';
 // })->name('password.request');
+
+Route::middleware(['auth'])->group(function() {
+    Route::get('/dashboard', function() {
+        $pageTitle = "Dashboard";
+        return view('dashboard', compact('pageTitle'));
+    })->name('dashboard');
+
+    // begin::category
+    Route::get('/blog-category/json', [BlogCategory::class, 'json'])->name('blog-category.json');
+    Route::resource('blog-category', BlogCategory::class);
+    // end::category
+});
+
+
+Route::get('/', [ShowBlogController::class, 'index'])->name('dashboard-blog');
