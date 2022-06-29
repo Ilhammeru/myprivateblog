@@ -10,21 +10,16 @@ cp .env.example .env
 ```
 php artisan key:generate
 ```
+```
+php artisan migrate --seed
+```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm install
 ```
 
-### Compiles and minifies for production
+### Run Laravel Mix
 ```
-npm run build
+npx mix
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
