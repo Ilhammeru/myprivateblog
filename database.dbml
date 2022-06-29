@@ -6,6 +6,22 @@ Table users  as U {
     username varchar [not null, unique]
     password text [not null]
     last_login timestamp [null]
+    status boolean [default: true]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table role {
+    id int [pk, increment]
+    name string [not null, unique]
+    created_at timestamp
+    updated_at timestamp
+}
+
+Table user_role {
+    id int [pk, increment]
+    user_id int [not null]
+    role_id int [not null]
     created_at timestamp
     updated_at timestamp
 }
@@ -35,6 +51,9 @@ Table blog {
     category_id int [not null]
     detail_category_id int
     is_post boolean [default: false]
+    is_main_blog boolean [default: false, note: 'blog who will be shown with the larger image']
+    is_thumbnail_blog boolean [default: false, note: 'blog who will be shown with the smaller image']
+    is_content_blog boolean [default: false, note: 'blog who will be shown with the starndart image size']
     created_at timestamp
     updated_at timestamp
 }

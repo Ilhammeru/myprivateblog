@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,9 @@ class CheckRole
     public function handle(Request $request, Closure $next, $role)
     {
         $roles = explode(':', $role);
-
+        $userRole = User::with('role')->find($request->user()->id);
         foreach($roles as $role) {
-            if($request->user()->role == $role) {
+            if(strtolower($userRole->role->name) == strtolower($role)) {
                 return $next($request);
             }
         }

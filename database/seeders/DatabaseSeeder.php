@@ -18,11 +18,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UsersSeeder::class,
-            SettingsSeeder::class,
-            PaymentSeeder::class,
-            IndoRegionProvinceSeeder::class,
-            IndoRegionRegencySeeder::class,
-            IndoRegionDistrictSeeder::class,
+            BlogSeeder::class
         ]);
     }
 }
