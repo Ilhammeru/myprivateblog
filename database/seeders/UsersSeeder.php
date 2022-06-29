@@ -28,42 +28,6 @@ class UsersSeeder extends Seeder
                 'role' => 'superadmin',
                 'created_at' => Carbon::now(),
             ],
-            [
-                'name' => 'Admin',
-                'nik' => '123456789',
-                'username' => 'admin',
-                'email' => 'admin@admin.com',
-                'password' => bcrypt('admin'),
-                'role' => 'admin',
-                'created_at' => Carbon::now(),
-            ],
-            [
-                'name' => 'Member',
-                'nik' => '123456789',
-                'username' => 'member',
-                'email' => 'member@member.com',
-                'password' => bcrypt('member'),
-                'role' => 'member',
-                'created_at' => Carbon::now(),
-            ],
-            [
-                'name' => 'Master Stockist',
-                'nik' => '123456789',
-                'username' => 'stockist',
-                'email' => 'stockist@stockist.com',
-                'password' => bcrypt('stockist'),
-                'role' => 'stockist',
-                'created_at' => Carbon::now(),
-            ],
-            [
-                'name' => 'Fadli Stockist',
-                'nik' => '123456789',
-                'username' => 'fadli',
-                'email' => 'fadli@stockist.com',
-                'password' => bcrypt('stockist'),
-                'role' => 'stockist',
-                'created_at' => Carbon::now(),
-            ],
         ];
 
         User::insert($user);

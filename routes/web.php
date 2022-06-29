@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/user', function() {
@@ -37,12 +37,12 @@ Route::get('/register', function() {
     return view('register');
 })->name('register');
 
-Route::get('/password-reset', function() {
-    return 'password reset';
-})->name('password.reset');
-Route::get('/password-email', function() {
-    return 'password email';
-})->name('password.email');
-Route::get('/password-request', function() {
-    return 'password request';
-})->name('password.request');
+// Route::get('/password-reset', function() {
+//     return 'password reset';
+// })->name('password.reset');
+// Route::get('/password-email', function() {
+//     return 'password email';
+// })->name('password.email');
+// Route::get('/password-request', function() {
+//     return 'password request';
+// })->name('password.request');

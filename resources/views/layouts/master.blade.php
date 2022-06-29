@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Title</title>
+    <title>MYBLOG</title>
 
     <!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -21,9 +21,6 @@
 	{{-- <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" type="text/css" /> --}}
 	<!--end::Page Vendor Stylesheets-->
 	@stack('styles')
-
-    {{-- <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 <body id="kt_body" class="header-tablet-and-mobile-fixed aside-enabled">
     <!--begin::Main-->
@@ -110,9 +107,6 @@
         });
 	</script>
 	@stack('scripts')
-    
-    {{-- <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script> --}}
 
 </body>
 </html>
